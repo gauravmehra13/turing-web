@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
-import logo from "/src/assets/images/logo/TuringMind-Logo.png";
+import logo from "/src/assets/images/logo/TuringMind.png";
 
 type NavbarProps = {
   scrollY: number;

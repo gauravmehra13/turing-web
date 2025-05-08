@@ -305,7 +305,7 @@ export default function ContactPage() {
                       <div className="w-10 h-10 rounded-full bg-primary-500/20 flex items-center justify-center mr-3 text-primary-500">
                         <BookOpen className="w-5 h-5" />
                       </div>
-                      <div>
+                      <div onClick={() => window.open('https://docs.turingmind.com', '_blank')}>
                         <h4 className="font-medium">Documentation</h4>
                         <p className="text-sm text-gray-400">Browse our technical resources</p>
                       </div>

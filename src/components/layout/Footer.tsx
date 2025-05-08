@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Github as GitHub, Twitter, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
-import logo from "/src/assets/images/logo/TuringMind-Logo.png";
+import logo from "/src/assets/images/logo/TuringMind.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
