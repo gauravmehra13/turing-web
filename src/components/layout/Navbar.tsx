@@ -53,7 +53,7 @@ export default function Navbar({ scrollY }: NavbarProps) {
   const navLinks = [
     { path: "/services", label: "Services" },
     { path: "/integrations", label: "Integrations" },
-    { path: "/about", label: "Company" },
+    { path: "/company", label: "Company" },
     { path: "/pricing", label: "Pricing" },
     { path: "/contact", label: "Contact" },
   ];

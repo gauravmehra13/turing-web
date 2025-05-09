@@ -9,6 +9,8 @@ import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import DevelopersPage from "./pages/DevelopersPage";
 import AppsecPage from "./pages/AppSecPage";
+import PricingPage from "./pages/Pricing";
+import CompanyPage from "./pages/Company";
 function App() {
   const location = useLocation();
 
@@ -25,6 +27,8 @@ function App() {
           <Route path="appsec" element={<AppsecPage />} />
           <Route path="solutions/developers" element={<DevelopersPage />} />
           <Route path="solutions/appsec" element={<AppsecPage />} />
+          <Route path="company" element={<CompanyPage />} />
+          <Route path="pricing" element={<PricingPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
