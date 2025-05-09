@@ -318,7 +318,7 @@ export default function IntegrationsPage() {
                           fullWidth
                           onClick={() =>
                             window.open(
-                              `/docs/integrations/${integration.id}`,
+                              `https://docs.turingmind.ai/docs/user-guide/IntegrationsGuide`,
                               "_blank"
                             )
                           }
@@ -424,8 +424,8 @@ export default function IntegrationsPage() {
                   and workflows, ensuring seamless security operations.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button>Request Custom Integration</Button>
-                  <Button variant="secondary">Contact Sales</Button>
+                  <Button href="/contact">Request Custom Integration</Button>
+                  <Button variant="secondary" href="/contact">Contact Sales</Button>
                 </div>
               </motion.div>
 

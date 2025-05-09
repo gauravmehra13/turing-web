@@ -351,7 +351,7 @@ export default function ContactPage() {
                       </div>
                       <div
                         onClick={() =>
-                          window.open("https://docs.turingmind.com", "_blank")
+                          window.open("https://docs.turingmind.ai", "_blank")
                         }
                       >
                         <h4 className="font-medium">Documentation</h4>
