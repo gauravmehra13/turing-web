@@ -466,6 +466,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Sudoviz and Turingmind Info Section */}
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
         <div className="absolute inset-0 bg-gradient-radial from-primary-500/5 to-transparent pointer-events-none"></div>
@@ -728,6 +729,120 @@ export default function HomePage() {
                 />
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-24 bg-dark-600 border-y border-primary-900/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center max-w-3xl mx-auto mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Trusted by <span className="gradient-text">Security Leaders</span>
+            </h2>
+            <p className="text-xl text-gray-300">
+              See what our customers have to say about their experience with
+              TuringMind
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                quote:
+                  "TuringMind AI has revolutionized our development process. It’s like having a senior developer and a security expert on our team 24/7.",
+                author: "Mandeep",
+                position: "HR",
+                company: "Vite",
+                image: "https://randomuser.me/api/portraits/women/1.jpg",
+              },
+              {
+                quote:
+                  "The ability to instantly identify vulnerabilities and understand the impact of changes has saved us countless hours and significantly improved our security posture.",
+                author: "Nagaraj Kuppuswamy",
+                position: "VP of Engineering",
+                company: "Beaconer",
+                image: "https://randomuser.me/api/portraits/men/1.jpg",
+              },
+            ].map((testimonial, index) => (
+              <motion.div
+                key={index}
+                className="relative"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+              >
+                <div className="relative z-10 h-full">
+                  <div className="bg-dark-400/60 backdrop-blur-sm border border-primary-500/20 rounded-xl p-8 h-full">
+                    {/* Quote Icon */}
+                    <div className="absolute -top-4 -left-4 w-8 h-8 bg-primary-500/20 rounded-full flex items-center justify-center">
+                      <svg
+                        className="w-4 h-4 text-primary-500"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z" />
+                      </svg>
+                    </div>
+
+                    <div className="mb-6">
+                      <p className="text-lg text-gray-300 italic">
+                        "{testimonial.quote}"
+                      </p>
+                    </div>
+
+                    <div className="flex items-center">
+                      <div className="flex-shrink-0">
+                        <img
+                          className="h-12 w-12 rounded-full border-2 border-primary-500/30"
+                          src={testimonial.image}
+                          alt={testimonial.author}
+                        />
+                      </div>
+                      <div className="ml-4">
+                        <div className="text-base font-semibold">
+                          {testimonial.author}
+                        </div>
+                        <div className="text-sm text-gray-400">
+                          {testimonial.position}
+                        </div>
+                        <div className="text-sm text-primary-400">
+                          {testimonial.company}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Decorative Elements */}
+                <motion.div
+                  className="absolute -top-4 -right-4 w-24 h-24 bg-primary-500/10 rounded-full blur-xl"
+                  animate={{ scale: [1, 1.2, 1] }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                />
+                <motion.div
+                  className="absolute -bottom-4 -left-4 w-24 h-24 bg-secondary-500/10 rounded-full blur-xl"
+                  animate={{ scale: [1, 1.3, 1] }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1,
+                  }}
+                />
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
