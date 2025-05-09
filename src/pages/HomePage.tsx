@@ -120,9 +120,7 @@ export default function HomePage() {
                 size="lg"
                 icon={<ArrowRight className="w-5 h-5" />}
                 iconPosition="right"
-                onClick={() =>
-                  window.open("https://https://app.turingmind.ai/")
-                }
+                onClick={() => window.open("https://app.turingmind.ai/")}
               >
                 Sign Up
               </Button>
@@ -887,9 +885,7 @@ export default function HomePage() {
                 size="lg"
                 icon={<ArrowRight className="w-5 h-5" />}
                 iconPosition="right"
-                onClick={() =>
-                  window.open("https://https://app.turingmind.ai/")
-                }
+                onClick={() => window.open("https://app.turingmind.ai/")}
               >
                 Sign Up
               </Button>
