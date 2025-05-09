@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import PageHeader from "../components/common/PageHeader";
 import { Users, Rocket, Heart } from "lucide-react";
-
+import teamImage1 from "/src/assets/images/company/1.jpg";
+import teamImage3 from "/src/assets/images/company/3.avif";
 const Company = () => {
   return (
     <div>
@@ -47,7 +48,7 @@ const Company = () => {
                   <div className="absolute inset-0 bg-dark-400 border border-primary-500/20">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-transparent" />
                     <img
-                      src="/src/assets/images/company/1.jpg"
+                      src={teamImage1}
                       alt="Team Image 1"
                       className="w-full h-full object-cover"
                     />
@@ -64,7 +65,7 @@ const Company = () => {
                   <div className="absolute inset-0 bg-dark-400 border border-primary-500/20">
                     <div className="absolute inset-0 bg-gradient-to-br from-secondary-500/20 to-transparent" />
                     <img
-                      src="/src/assets/images/company/3.avif"
+                      src="/src/assets/images/company/2.jpg"
                       alt="Team Image 2"
                       className="w-full h-full object-cover"
                     />
@@ -84,7 +85,7 @@ const Company = () => {
                   <div className="absolute inset-0 bg-dark-400 border border-primary-500/20">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-transparent" />
                     <img
-                       src="/src/assets/images/company/2.avif"
+                      src={teamImage3}
                       alt="Team Image 3"
                       className="w-full h-full object-cover"
                     />
