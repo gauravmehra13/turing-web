@@ -36,10 +36,10 @@ export default function HomePage() {
   const features = [
     {
       icon: <BrainCircuit className="w-10 h-10" />,
-      title: "AI-Powered Code Insights",
+      title: "Codebase Chat",
       description:
         "Get instant security analysis and recommendations through conversational AI for your entire codebase.",
-      link: "/code-analysis",
+      link: "/services/ai-chat",
     },
     {
       icon: <Workflow className="w-10 h-10" />,
@@ -71,10 +71,10 @@ export default function HomePage() {
     },
     {
       icon: <CheckCircle className="w-10 h-10" />,
-      title: "False Positive Analysis",
+      title: "Vulnerability Management",
       description:
         "Comprehensive analysis of Common Vulnerabilities and Exposures to protect against known threats.",
-      link: "/services/cve-cwe-analysis",
+      link: "/services/vulnerability-management",
     },
   ];
 

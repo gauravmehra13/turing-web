@@ -14,11 +14,12 @@ export default function Footer() {
       { label: "Press", path: "/press" },
     ],
     services: [
+      { label: "Codebase Chat", path: "/services/ai-chat" },
       { label: "Business Logic Map", path: "/services/business-logic-map" },
-      { label: "CVE & CWE Analysis", path: "/services/cve-cwe-analysis" },
       { label: "Threat Modeling", path: "/services/threat-modeling" },
       { label: "Endpoint Analysis", path: "/services/endpoint-analysis" },
       { label: "Security Scanning", path: "/services/security-scanning" },
+      { label: "Vulnerability Management", path: "/services/vulnerability-management" },
     ],
     legal: [
       { label: "Privacy Policy", path: "/privacy" },

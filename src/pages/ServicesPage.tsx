@@ -18,15 +18,16 @@ export default function ServicesPage() {
   const services = [
     {
       icon: <BrainCircuit className="w-10 h-10" />,
-      title: "AI-Powered Code Insights",
+      title: "Codebase Chat",
       description:
-        "Get instant security analysis and recommendations through conversational AI for your entire codebase.",
+        "Clone your repo and chat with our AI to explore files, analyze flow, and run security reviews.",
       features: [
-        "Instant security analysis",
-        "Conversational AI recommendations",
-        "Comprehensive codebase insights",
+        "Ask about files, functions, and commits",
+        "Run security-focused code reviews",
+        "Analyze control and data flow",
+        "Use deep search to surface hidden issues",
       ],
-      link: "/code-analysis",
+      link: "/services/ai-chat",
     },
     {
       icon: <Workflow className="w-10 h-10" />,
@@ -82,7 +83,7 @@ export default function ServicesPage() {
     },
     {
       icon: <ShieldCheck className="w-10 h-10" />,
-      title: "Threat Analysis",
+      title: "Vulnerability Management",
       description:
         "Identify and mitigate common vulnerabilities and exposures with comprehensive analysis and remediation strategies.",
       features: [
@@ -91,7 +92,7 @@ export default function ServicesPage() {
         "Remediation guidance",
         "False positive reduction",
       ],
-      link: "/services/cve-cwe-analysis",
+      link: "/services/vulnerability-management",
     },
   ];
 

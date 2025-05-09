@@ -11,6 +11,13 @@ import {
   CheckCircle,
   ArrowRight,
 } from "lucide-react";
+import githubLogo from "/src/assets/images/integrations/github.png";
+import jiraLogo from "/src/assets/images/integrations/jira.png";
+import semgrepLogo from "/src/assets/images/integrations/semgrep.png";
+import snykLogo from "/src/assets/images/integrations/snyk.png";
+import grypeLogo from "/src/assets/images/integrations/grype.png";
+import checkovLogo from "/src/assets/images/integrations/checkov.png";
+import gitlabLogo from "/src/assets/images/integrations/gitlab.png";
 
 export default function IntegrationsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -29,7 +36,7 @@ export default function IntegrationsPage() {
       description:
         "Seamlessly integrate security testing into your GitHub repositories and workflows.",
       category: "cicd",
-      icon: <GitHub className="w-10 h-10" />,
+      icon: <img src={githubLogo} alt="GitHub Logo" className="w-10 h-10" />,
       popular: true,
       features: [
         "Automatic scanning on pull requests",
@@ -44,7 +51,7 @@ export default function IntegrationsPage() {
       description:
         "Automatically create and track security issues in your Jira projects.",
       category: "ticketing",
-      icon: <Figma className="w-10 h-10" />, // Using Figma icon as placeholder
+      icon: <img src={jiraLogo} alt="Jira Logo" className="w-10 h-10" />,
       popular: true,
       features: [
         "Automatic issue creation from findings",
@@ -59,7 +66,7 @@ export default function IntegrationsPage() {
       description:
         "Enhance code scanning with Semgrep's powerful static analysis engine.",
       category: "scanners",
-      icon: <Slack className="w-10 h-10" />, // Using Slack icon as placeholder
+      icon: <img src={semgrepLogo} alt="Semgrep Logo" className="w-10 h-10" />,
       popular: false,
       features: [
         "Custom rule integration",
@@ -74,7 +81,7 @@ export default function IntegrationsPage() {
       description:
         "Combine Turingmind insights with Snyk's dependency vulnerability detection.",
       category: "scanners",
-      icon: <GitHub className="w-10 h-10" />, // Using GitHub icon as placeholder
+      icon: <img src={snykLogo} alt="Snyk Logo" className="w-10 h-10" />,
       popular: true,
       features: [
         "Comprehensive vulnerability detection",
@@ -89,7 +96,7 @@ export default function IntegrationsPage() {
       description:
         "Integrate container vulnerability scanning into your security pipeline.",
       category: "scanners",
-      icon: <Figma className="w-10 h-10" />, // Using Figma icon as placeholder
+      icon: <img src={grypeLogo} alt="Grype Logo" className="w-10 h-10" />,
       popular: false,
       features: [
         "Container image scanning",
@@ -104,7 +111,7 @@ export default function IntegrationsPage() {
       description:
         "Scan infrastructure as code for security and compliance issues.",
       category: "scanners",
-      icon: <Slack className="w-10 h-10" />, // Using Slack icon as placeholder
+      icon: <img src={checkovLogo} alt="Checkov Logo" className="w-10 h-10" />,
       popular: false,
       features: [
         "IaC security scanning",
@@ -120,7 +127,7 @@ export default function IntegrationsPage() {
       description:
         "Enhance your GitLab DevSecOps pipeline with Turingmind security insights.",
       category: "cicd",
-      icon: <Figma className="w-10 h-10" />, // Using Figma icon as placeholder
+      icon: <img src={gitlabLogo} alt="GitLab Logo" className="w-10 h-10" />,
       popular: false,
       features: [
         "Pipeline integration",
