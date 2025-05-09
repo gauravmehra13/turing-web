@@ -168,8 +168,11 @@ export default function Navbar({ scrollY }: NavbarProps) {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="btn-primary"
+              onClick={() =>
+                window.open("https://app.turingmind.ai/", "_blank")
+              }
             >
-              Get Demo
+              Sign Up
             </motion.button>
           </nav>
 
@@ -282,7 +285,14 @@ export default function Navbar({ scrollY }: NavbarProps) {
                   transition={{ delay: (navLinks.length + 1) * 0.1 }}
                   className="pt-2"
                 >
-                  <button className="w-full btn-primary">Get Demo</button>
+                  <button
+                    onClick={() =>
+                      window.open("https://app.turingmind.ai/", "_blank")
+                    }
+                    className="w-full btn-primary"
+                  >
+                    Sign Up
+                  </button>
                 </motion.div>
               </nav>
             </div>

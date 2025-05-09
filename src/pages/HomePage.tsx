@@ -466,6 +466,272 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-radial from-primary-500/5 to-transparent pointer-events-none"></div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center max-w-3xl mx-auto mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Secure Software, <span className="gradient-text">Simplified</span>
+            </h2>
+            <p className="text-xl text-gray-300">
+              Build, secure, and scale your applications with confidence.
+              TuringMind and Sudoviz work together to empower developers and
+              AppSec teams with intelligent tools for code exploration, security
+              analysis, and proactive threat defense.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              className="order-2 lg:order-1"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <p className="text-lg text-gray-300 mb-8">
+                From deep code insights to automated vulnerability management,
+                our platform streamlines your workflow and strengthens your
+                security posture.
+              </p>
+
+              <div className="space-y-6">
+                {[
+                  {
+                    title: "Explore Your Codebase with Ease",
+                    description:
+                      "TuringMind lets you navigate your repository's file structure, functions, and commits, giving you a clear view of your code's DNA. Ask specific questions about your codebase and get precise answers instantly.",
+                    icon: <BrainCircuit className="w-8 h-8 text-primary-400" />,
+                  },
+                  {
+                    title: "Catch Vulnerabilities Early",
+                    description:
+                      "Sudoviz's powerful code scanning, integrated with tools like Semgrep and Snyk, flags issues in real-time, so developers can fix them before they reach production.",
+                    icon: <ShieldAlert className="w-8 h-8 text-primary-400" />,
+                  },
+                  {
+                    title: "Proactive Threat Defense",
+                    description:
+                      "Sudoviz's threat modeling and endpoint analysis help AppSec teams identify risks and harden applications against attacks.",
+                    icon: <ShieldCheck className="w-8 h-8 text-primary-400" />,
+                  },
+                  {
+                    title: "Preserve Tribal Knowledge",
+                    description:
+                      "TuringMind captures critical insights about your organization's environments, repositories, and projects, ensuring knowledge stays accessible and actionable.",
+                    icon: <Network className="w-8 h-8 text-primary-400" />,
+                  },
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex gap-4 items-start"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                  >
+                    <div className="shrink-0 bg-dark-400/60 p-3 rounded-lg border border-primary-500/20">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-300">{item.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <motion.div
+                className="mt-10"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+              >
+                <Button
+                  size="lg"
+                  icon={<ArrowRight className="w-5 h-5" />}
+                  iconPosition="right"
+                >
+                  Get Started Today
+                </Button>
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              className="order-1 lg:order-2"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+            >
+              <div className="relative">
+                {/* Main illustration */}
+                <div className="relative z-10 bg-dark-400/60 backdrop-blur-sm border border-primary-500/20 rounded-xl p-8 shadow-[0_0_30px_rgba(139,92,246,0.15)]">
+                  <div className="aspect-square relative">
+                    {/* Code visualization elements */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <svg className="w-full h-full" viewBox="0 0 100 100">
+                        {/* Connected nodes visualization */}
+                        <motion.path
+                          d="M20,50 Q50,20 80,50"
+                          stroke="url(#gradient1)"
+                          strokeWidth="0.5"
+                          fill="none"
+                          initial={{ pathLength: 0 }}
+                          whileInView={{ pathLength: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 1.5, delay: 0.2 }}
+                        />
+                        <motion.path
+                          d="M20,50 Q50,80 80,50"
+                          stroke="url(#gradient2)"
+                          strokeWidth="0.5"
+                          fill="none"
+                          initial={{ pathLength: 0 }}
+                          whileInView={{ pathLength: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 1.5, delay: 0.4 }}
+                        />
+
+                        {/* Nodes */}
+                        {[
+                          { cx: 20, cy: 50, color: "#8b5cf6" },
+                          { cx: 50, cy: 20, color: "#8b5cf6" },
+                          { cx: 80, cy: 50, color: "#8b5cf6" },
+                          { cx: 50, cy: 80, color: "#8b5cf6" },
+                          { cx: 35, cy: 35, color: "#ec4899" },
+                          { cx: 65, cy: 35, color: "#ec4899" },
+                          { cx: 35, cy: 65, color: "#ec4899" },
+                          { cx: 65, cy: 65, color: "#ec4899" },
+                        ].map((node, index) => (
+                          <motion.circle
+                            key={index}
+                            cx={node.cx}
+                            cy={node.cy}
+                            r="3"
+                            fill={node.color}
+                            initial={{ opacity: 0, scale: 0 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.3, delay: 0.1 * index }}
+                          />
+                        ))}
+
+                        {/* Additional connecting lines */}
+                        {[
+                          "M35,35 L50,20",
+                          "M65,35 L50,20",
+                          "M35,65 L20,50",
+                          "M35,65 L50,80",
+                          "M65,65 L80,50",
+                          "M65,65 L50,80",
+                          "M35,35 L20,50",
+                          "M65,35 L80,50",
+                        ].map((path, index) => (
+                          <motion.path
+                            key={index}
+                            d={path}
+                            stroke="#8b5cf6"
+                            strokeWidth="0.3"
+                            strokeDasharray="2,2"
+                            initial={{ pathLength: 0, opacity: 0 }}
+                            whileInView={{ pathLength: 1, opacity: 0.6 }}
+                            viewport={{ once: true }}
+                            transition={{
+                              duration: 1,
+                              delay: 0.8 + index * 0.05,
+                            }}
+                          />
+                        ))}
+
+                        {/* Gradients for paths */}
+                        <defs>
+                          <linearGradient
+                            id="gradient1"
+                            x1="0%"
+                            y1="0%"
+                            x2="100%"
+                            y2="0%"
+                          >
+                            <stop offset="0%" stopColor="#8b5cf6" />
+                            <stop offset="100%" stopColor="#ec4899" />
+                          </linearGradient>
+                          <linearGradient
+                            id="gradient2"
+                            x1="0%"
+                            y1="0%"
+                            x2="100%"
+                            y2="0%"
+                          >
+                            <stop offset="0%" stopColor="#8b5cf6" />
+                            <stop offset="100%" stopColor="#ec4899" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+
+                      {/* Central shield icon */}
+                      <motion.div
+                        className="absolute"
+                        animate={{ rotate: [0, 10, -10, 0] }}
+                        transition={{
+                          duration: 10,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                        }}
+                      >
+                        <motion.div
+                          className="bg-dark-500/90 p-6 rounded-full border border-primary-500/40 shadow-[0_0_20px_rgba(139,92,246,0.3)]"
+                          animate={{ scale: [1, 1.05, 1] }}
+                          transition={{
+                            duration: 3,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                          }}
+                        >
+                          <ShieldCheck className="w-12 h-12 text-primary-500" />
+                        </motion.div>
+                      </motion.div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Decorative blurs */}
+                <motion.div
+                  className="absolute -top-5 -right-5 w-24 h-24 bg-primary-500/20 rounded-full blur-2xl"
+                  animate={{ scale: [1, 1.2, 1] }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                />
+                <motion.div
+                  className="absolute -bottom-8 -left-8 w-32 h-32 bg-secondary-500/20 rounded-full blur-2xl"
+                  animate={{ scale: [1, 1.3, 1] }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1,
+                  }}
+                />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
