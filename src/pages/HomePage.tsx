@@ -95,7 +95,7 @@ export default function HomePage() {
             >
               {/* Secure Apps with <br className="hidden sm:block" />
               <span className="gradient-text">AI-Powered Analysis</span> */}
-              PhD. Level AI Product
+              PhD. Level AI
               <br className="hidden sm:block" />
               <span className="gradient-text">Security Expert</span>
             </motion.h1>
@@ -120,8 +120,11 @@ export default function HomePage() {
                 size="lg"
                 icon={<ArrowRight className="w-5 h-5" />}
                 iconPosition="right"
+                onClick={() =>
+                  window.open("https://https://app.turingmind.ai/")
+                }
               >
-                Start Free Trial
+                Sign Up
               </Button>
               <Button
                 variant="secondary"
@@ -884,8 +887,11 @@ export default function HomePage() {
                 size="lg"
                 icon={<ArrowRight className="w-5 h-5" />}
                 iconPosition="right"
+                onClick={() =>
+                  window.open("https://https://app.turingmind.ai/")
+                }
               >
-                Start Free Trial
+                Sign Up
               </Button>
               <Button variant="secondary" size="lg" href="/contact">
                 Schedule Demo
