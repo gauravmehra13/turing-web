@@ -11,6 +11,8 @@ import DevelopersPage from "./pages/DevelopersPage";
 import AppsecPage from "./pages/AppSecPage";
 import PricingPage from "./pages/Pricing";
 import CompanyPage from "./pages/Company";
+import WaitlistPage from "./pages/WaitlistPage";
+
 function App() {
   const location = useLocation();
 
@@ -29,6 +31,7 @@ function App() {
           <Route path="solutions/appsec" element={<AppsecPage />} />
           <Route path="company" element={<CompanyPage />} />
           <Route path="pricing" element={<PricingPage />} />
+          <Route path="join-waitlist" element={<WaitlistPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

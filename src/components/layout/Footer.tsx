@@ -12,6 +12,7 @@ export default function Footer() {
       { label: "Careers", path: "/careers" },
       { label: "Blog", path: "/blog" },
       { label: "Press", path: "/press" },
+      { label: "Join Waitlist", path: "/join-waitlist" },
     ],
     services: [
       { label: "Codebase Chat", path: "/services/ai-chat" },
